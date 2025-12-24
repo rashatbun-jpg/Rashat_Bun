@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Coffee Shop</title>
+  <link rel="stylesheet" href="cafe.css" />
+
+  <!-- خط عربي جميل -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo2">
+      <img src="photo_2025-12-01_14-48-14.jpg" height="60" width="60" alt="شعار المقهى">
+     
+    </div>
+
+    <nav class="headerlinks">
+      <a href="#hot">مشروبات ساخنة</a>
+      <a href="#cold">مشروبات باردة</a>
+      <a href="#bakery">مخبوزات</a>
+      <a href="#desserts">حلويات</a>
+      <a href="home.html">الصفحة الرئيسية</a>
+    </nav>
+    <div class="navbar">
+      <button onclick="toggleMenu()" class="menu_toogle">☰</button>
+      <ul id="menu" hidden>
+        <li><a href="#hot">مشروبات ساخنة</a></li>
+        <li><a href="#cold">مشروبات باردة</a></li>
+        <li><a href="#bakery">مخبوزات</a></li>
+        <li><a href="#desserts">حلويات</a></li>
+        <li><a href="home.html">الصفحة الرئيسية</a></li>
+      </ul>
+    </div>
+  </header>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.hidden = !menu.hidden;
+  }
+</script>
+  <section class="title2">
+    <h2>المنيو</h2>
+    <p>اختاري نكهتك… وخلي المزاج يروق </p>
+  </section>
+
+  <!-- ✅ قسم: مشروبات ساخنة -->
+  <section class="menu-section" id="hot">
+    <div class="section-head">
+      <h3>المشروبات الساخنة</h3>
+      <span class="divider"></span>
+    </div>
+
+    <section class="products">
+      <div class="card">
+        <img src="فنجان من القهوة مع بخار الماء الساخن _.jpg" alt="قهوة عربية">
+        <div class="card-top">
+          <h4>قهوة عربية</h4>
+          <span class="price">12.00 LYD</span>
+        </div>
+        <p>قهوة عربية بطعم الهيل… نكهة تعكس دفء الضيافة.</p>
+      </div>
+
+      <div class="card">
+        <img src="download (3).jpg" alt="كابتشينو">
+        <div class="card-top">
+          <h4>كابتشينو</h4>
+          <span class="price">8.00 LYD</span>
+        </div>
+        <p>كابتشينو كريمي برغوة ناعمة… توازن مثالي بين القهوة والحليب.</p>
+      </div>
+
+      <div class="card">
+        <img src="Caramel Hazelnut Iced Coffee [10 Minutes] - Chasety.jpg" alt="اسبريسو">
+        <div class="card-top">
+          <h4>اسبريسو</h4>
+          <span class="price">6.00 LYD</span>
+        </div>
+        <p>اسبريسو مركز وقوي… جرعة طاقة بنكهة فاخرة.</p>
+      </div>
+
+      <div class="card">
+        <img src="MUST TRY_ This Golden Tea Glow Will Change Your Morning Routine!.jpg" alt="شاي بالنعناع">
+        <div class="card-top">
+          <h4>شاي</h4>
+          <span class="price">5.00 LYD</span>
+        </div>
+        <p>شاي دافئ بالنعناع… منعش ومناسب لكل لحظة هدوء.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- ✅ قسم: مشروبات باردة -->
+  <section class="menu-section" id="cold">
+    <div class="section-head">
+      <h3>المشروبات الباردة</h3>
+      <span class="divider"></span>
+    </div>
+
+    <section class="products">
+      <div class="card">
+        <img src="Mango Smoothie_ Quick and Delicious Recipe.jpg" alt="عصير مانجا">
+        <div class="card-top">
+          <h4>عصير المانجا</h4>
+          <span class="price">17.00 LYD</span>
+        </div>
+        <p>عصير لذيذ ومحبوب… بنكهة استوائية وانتعاش قوي.</p>
+      </div>
+
+      <div class="card">
+        <img src="Looking for refreshing ideas_ 🍋 From healthy….jpg" alt="عصير ليمون ونعناع">
+        <div class="card-top">
+          <h4>ليمون ونعناع</h4>
+          <span class="price">19.00 LYD</span>
+        </div>
+        <p>عصير منعش غني بفيتامين C… يروق المزاج من أول رشفة.</p>
+      </div>
+
+      <div class="card">
+        <img src="Drink for Weight Loss.jpg" alt="عصير برتقال">
+        <div class="card-top">
+          <h4>عصير البرتقال</h4>
+          <span class="price">14.00 LYD</span>
+        </div>
+        <p>برتقال طازج… نكهة طبيعية صافية.</p>
+      </div>
+
+      <div class="card">
+        <img src="download (5).jpg" alt="عصير فراولة">
+        <div class="card-top">
+          <h4>عصير الفراولة</h4>
+          <span class="price">8.00 LYD</span>
+        </div>
+        <p>فراولة طازجة… طعم حلو وانتعاش سريع.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- ✅ قسم: مخبوزات -->
+  <section class="menu-section" id="bakery">
+    <div class="section-head">
+      <h3>المخبوزات</h3>
+      <span class="divider"></span>
+    </div>
+
+    <section class="products">
+      <div class="card">
+        <img src="Croissants 🥐.jpg" alt="كرواسون">
+        <div class="card-top">
+          <h4>كرواسون</h4>
+          <span class="price">9.00 LYD</span>
+        </div>
+        <p>كرواسون فرنسي طازج… طبقات هشة وطعم زبدة راقي.</p>
+      </div>
+
+<div class="card">
+        <img src="donuts ♡.jpg" alt="دونات">
+        <div class="card-top">
+          <h4>دونات</h4>
+          <span class="price">11.00 LYD</span>
+        </div>
+        <p>دونات خفيفة وهشة… بنكهات متنوعة تناسب القهوة.</p>
+      </div>
+
+      <div class="card">
+        <img src="Pumpkin Cheesecake Cinnamon Rolls.jpg" alt="سينابون">
+        <div class="card-top">
+          <h4>سينابون</h4>
+          <span class="price">13.00 LYD</span>
+        </div>
+        <p>سينابون طري ودافئ… قرفة وصوص سكر يجنّن.</p>
+      </div>
+
+      <div class="card">
+        <img src="Best Orange Cake – 7-Ingredient Moist & Flavorful Citrus Cake.jpg" alt="انجليش كيك">
+        <div class="card-top">
+          <h4>إنجليش كيك</h4>
+          <span class="price">6.00 LYD</span>
+        </div>
+        <p>كيك كلاسيكي طري… نكهة بسيطة تناسب أي مشروب.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- ✅ قسم: حلويات -->
+  <section class="menu-section" id="desserts">
+    <div class="section-head">
+      <h3>الحلويات</h3>
+      <span class="divider"></span>
+    </div>
+
+    <section class="products">
+      <div class="card">
+        <img src="🫐 𝐁𝐥𝐚𝐜𝐤𝐛𝐞𝐫𝐫𝐢𝐞𝐬 𝐚𝐧𝐝 𝐫𝐚𝐬𝐩𝐛𝐞𝐫𝐫𝐢𝐞𝐬 𝐠𝐚𝐫𝐧𝐢𝐬𝐡 𝐚 𝐬𝐥𝐢𝐜𝐞 𝐨𝐟 𝐜𝐡𝐞𝐞𝐬𝐞𝐜𝐚𝐤𝐞 𝐨𝐧 𝐚 𝐩𝐥𝐚𝐭𝐞 🍰🍇.jpg" alt="كيك الكرز">
+        <div class="card-top">
+          <h4>كيك الكرز</h4>
+          <span class="price">14.00 LYD</span>
+        </div>
+        <p>كيكة خفيفة بنكهة الكرز… مزيج حلاوة وحموضة منعش.</p>
+      </div>
+
+      <div class="card">
+        <img src="Matilda’s Chocolate Cake.jpg" alt="ماتيلدا كيك">
+        <div class="card-top">
+          <h4>ماتيلدا كيك</h4>
+          <span class="price">20.00 LYD</span>
+        </div>
+        <p>شوكولاتة كثيفة وصوص غني… لعشاق الطعم القوي.</p>
+      </div>
+
+      <div class="card">
+        <img src="15 Best French Macaron Flavors To Eat - Restaurant Clicks.jpg" alt="ماكرون">
+        <div class="card-top">
+          <h4>ماكرون</h4>
+          <span class="price">6.00 LYD</span>
+        </div>
+        <p>ماكرون فرنسي هش… قطعة صغيرة بمذاق فاخر.</p>
+      </div>
+
+      <div class="card">
+        <img src="download (6).jpg" alt="براونيز">
+        <div class="card-top">
+          <h4>براونيز</h4>
+          <span class="price">12.00 LYD</span>
+        </div>
+        <p>براونيز بالشوكولاتة الغنية… قوام ثقيل وطعم يطوّح.</p>
+      </div>
+    </section>
+  </section>
+
+  <footer class="mini-footer">
+    <p>© cafe Rashat Bun — Menu Page</p>
+  </footer>
+
+</body>
+</html>

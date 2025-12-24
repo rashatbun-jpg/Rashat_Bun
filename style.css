@@ -1,0 +1,886 @@
+/* إعادة ضبط الهوامش والحشوات لجميع العناصر وضبط صندوق القياس */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+/* إعداد الخط والخلفية العامة للصفحة */
+body {
+    color: #fff;
+    background-image: radial-gradient(circle at left, #4a2e1a 0%,
+            #7a563b 30%,
+            #d3bfa6 55%,
+            #f3ece5 80%, #e9e9e9 100%);
+    font-family: "Cairo", sans-serif;
+}
+
+/* ======================= الهيدر (Header) ======================= */
+
+/* شريط الهيدر العلوي: يحتوي الشعار والقائمة */
+header {
+    width: 100%;
+    height: 110px;
+    padding: 30px;
+    background-color: #704a29;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    z-index: 2;
+}
+
+/* شريط الروابط الرئيسي */
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* صورة شعار المقهى */
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+/* روابط الهيدر */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    padding-right: 40px;
+}
+
+/* تأثير التحويم على روابط الهيدر */
+nav a:hover {
+    color: #e6c29f;
+    transform: scale(1.2);
+}
+
+/* ======================= قسم الهيرو (Hero Section) ======================= */
+
+/* الحاوية العامة لقسم الهيرو (نص + صور) */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+    align-items: center;
+    min-height: calc(100vh-120px);
+    overflow: hidden;
+    margin-top: -80px;
+}
+
+/* عناوين الهيرو */
+.hero h1 {
+    margin-top: -10px;
+    margin-left: 70px;
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: "Georgia", serif;
+    color: #fff;
+}
+
+/* النص الفرعي داخل الهيرو */
+.hero h2 {
+    padding: 20px;
+    margin-left: 70px;
+    font-family: "Georgia", serif;
+}
+
+/* زر "اطلب الآن" */
+.order-btn {
+    padding: 12px 50px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(to right, #c37730, #704a29);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 70px;
+    width: 190px;
+}
+
+/* تأثير التحويم على زر الطلب */
+.order-btn:hover {
+    opacity: .8;
+}
+
+/* صورة حبوب القهوة داخل صندوق النص */
+.text-box img {
+    opacity: 0.9;
+    width: 300px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+/* حاوية الصور في الهيرو */
+.imgs {
+    position: relative;
+    height: auto;
+    justify-self: center;
+    width: 45vw;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+/* الصورة الرئيسية في الجانب الأيمن */
+.main-img {
+    width: 100%;
+    position: relative;
+    left: auto;
+    top: 20px;
+    z-index: 2;
+    opacity: 0.9;
+    height: auto;
+}
+
+/* الصورة الخلفية الشفافة في الهيرو */
+.img1 {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    opacity: 0.5;
+    z-index: 1;
+    transform: scale(1.3);
+}
+
+/* ======================= قسم "من نحن" About Section ======================= */
+
+/* خلفية قسم "من نحن" */
+.about-section {
+    width: 100%;
+    padding: 200px 0;
+    background: #f5efe6;
+}
+
+/* صندوق المحتوى في قسم "من نحن" */
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto 60px auto;
+    flex-direction: row-reverse;
+    border-left: 3px solid #4a2e1a;
+    border-bottom: 3px solid #4a2e1a;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #704a29;
+    background-color: #f5e9da;
+}
+
+/* عكس ترتيب العناصر في بعض البلوكات */
+.about-box.reverse {
+    flex-direction: row-reverse;
+}
+
+/* صورة قسم "من نحن" */
+.about-img img {
+    width: 250px;
+    height: auto;
+}
+
+/* عنوان فرعي في قسم "من نحن" */
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #3a2a1a;
+    font-weight: bold;
+    padding-left: 50px;
+    text-align: center;
+}
+
+/* فقرة الوصف في قسم "من نحن" */
+.about-text p {
+    margin-bottom: 15px;
+    color: #4a3a2a;
+    line-height: 1.6;
+    font-size: 27px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+}
+
+/* ======================= عنوان الجاليري + الخط الفاصل ======================= */
+
+/* حاوية عنوان العروض المميزة والخط بجانبه */
+.label-gallery {
+    padding: 20px 20px 70px 20px;
+    margin: 200px auto 10px auto;
+    text-align: center;
+    color: #553e24;
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    direction: rtl;
+    margin-bottom: -15px;
+}
+
+/* تنسيق عنوان "عروض رشة بن المميزة" */
+.label-gallery h1 {
+    margin: 0;
+    padding: 5px;
+    margin-right: 10px;
+    margin-top: -35px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* العنصر الخطي الفاصل بجانب العنوان */
+.devider {
+    height: 2px;
+    width: 80%;
+    flex: 1;
+    background: rgba(58,39,23,.25);
+    border-radius: 50px;
+}
+
+/* ======================= قسم الجاليري (الصور) ======================= */
+
+/* شبكة كروت الجاليري */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* الكرت الفردي في الجاليري */
+.gallery .box {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* صورة الكرت */
+.gallery .box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+/* طبقة شفافة فوق الصورة */
+.gallery .box::before {
+    content: "";
+    position: absolute;
+    background: rgba(230, 200, 170, 0.25);
+    z-index: 1;
+}
+
+/* النص الذي يظهر في وسط الكرت */
+.gallery .box .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 2;
+    text-align: center;
+}
+
+/* عند تركيز المستخدم على كرت معين (بواسطة tabindex) يتم تعتيم الباقي */
+.gallery:has(.box:focus-within) .box:not(:focus-within) {
+    filter: blur(4px) brightness(0.7);
+    transition: 0.4s;
+}
+
+/* الكرت في حالة التركيز */
+.gallery .box:focus-within {
+    z-index: 10;
+    overflow: visible;
+    translate: 0 10%;
+    transition: 0.3s;
+    height: auto;
+}
+
+/* تكبير الصورة عند التركيز */
+.gallery .box:focus-within img {
+    transform: scale(1.1);
+}
+
+/* إظهار الطبقة الشفافة عند التركيز */
+.gallery .box:focus-within::before {
+    opacity: 1;
+}
+
+/* إظهار النص عند التركيز */
+.gallery .box:focus-within .text {
+    opacity: 1;
+}
+
+/* ======================= قسم الكروت الخدمية ======================= */
+
+/* العنوان فوق الكروت */
+.label-card {
+    margin-top: 130px;
+    text-align: center;
+    color: #553e24;
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+/* شبكة الكروت */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 70px;
+    margin: 40px 10px 150px 20px;
+    justify-content: center;
+}
+
+/* تصميم الكرت */
+.card {
+    background: #f5efe6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s;
+    height: 200px;
+    color: #4a3a2a;
+    font-size: large;
+}
+
+/* تأثير التحويم على الكرت */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* تنسيق فقرة النص في الكرت */
+.card p {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+}
+
+/* عنوان الكرت */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* الأيقونة داخل الكرت */
+.card img {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+/* ======================= الفوتر (Footer) ======================= */
+
+/* خلفية الفوتر وتخطيطه */
+.footer1 {
+    margin-top: 150px;
+    width: 100%;
+    background-color: #704a29;
+    height: 100px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* أيقونات السوشيال ميديا */
+.footer1 img {
+    width: 40px;
+    opacity: 0.7;
+}
+
+/* روابط الفوتر */
+.footer1 a {
+    text-decoration: none;
+    color: #d3bfa6;
+    padding: 10px;
+}
+
+/* زر المينيو (الهامبورغر) في الشاشات الصغيرة */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ======================= ميديا كويري: شاشات أقل من 900px ======================= */
+
+
+@media (max-width: 900px) {
+    /* إعادة ضبط توزيع أعمدة الهيدر */
+    header {
+        padding: 0 20px;
+        height: 100px;
+        grid-template-columns: auto 1fr auto;
+    }
+
+    /* إظهار القائمة كمنيو منسدلة تحت الزر */
+    nav {
+        position: absolute;
+        top: 90px;
+        left: 70%;
+        transform: translateX(-50%);
+        width: 170px;
+        background: #704a29;
+        border-radius: 26px;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        transition: 0.3s ease;
+        z-index: 200;
+    }
+
+    /* عند إضافة كلاس active تظهر القائمة */
+    nav.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        padding: 10px 0;
+    }
+
+    /* شكل الروابط داخل القائمة المنسدلة */
+    nav a {
+        width: 100%;
+        text-align: right;
+        align-items: center;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        position: relative;
+        border-bottom: 1px solid white;
+    }
+
+    /* خط رفيع أسفل كل عنصر في القائمة */
+    nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        left: 20px;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+    }
+
+    /* إزالة الخط من آخر عنصر */
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* إظهار زر المينيو وتنسيقه */
+    .menu-toggle {
+        display: block;
+        justify-self: end;
+        align-self: center;
+        background: #f5efe6;
+        border: none;
+        font-size: 28px;
+        padding: 4px 10px;
+        border-radius: 14px;
+        cursor: pointer;
+        width: auto;
+    }
+
+    /* تعديل توزيع الأعمدة في الهيرو */
+    .hero {
+        grid-template-columns: 1fr 2fr;
+        margin: 10px 0 30px 30px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* تصغير عنوان الهيرو */
+    .hero h1 {
+        color: #e1b394;
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 3px;
+        margin-left: 20px;
+    }
+
+    /* تعديل نص الوصف في الهيرو */
+    .hero h2 {
+        font-size: 18px;
+        padding: 5px;
+        margin-left: 20px;
+    }
+
+    /* زر الطلب في الشاشات المتوسطة */
+    .order-btn {
+        padding: 8px 30px;
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 150px;
+        font-size: 14px;
+    }
+
+    /* صورة حبوب القهوة */
+    .text-box img {
+        width: 220px;
+        margin-top: 10px;
+    }
+
+    /* صور الهيرو في الشاشات المتوسطة */
+    .imgs {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-img {
+        width: 90%;
+        position: relative;
+        left: 15px;
+        top: 10px;
+        z-index: 2;
+        opacity: 0.8;
+    }
+
+    .img1 {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        position: absolute;
+        left: 0;
+        opacity: 0.6;
+        z-index: 1;
+        transform: scale(0.95);
+    }
+
+    /* تكييف الجاليري في الشاشات المتوسطة */
+    .label-gallery {
+        margin-top: 170px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery .box {
+        height: 500px;
+    }
+
+    .gallery .box img {
+        display: block;
+        width: 85%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: contain;
+    }
+
+    /* تكييف الكروت في الشاشات المتوسطة */
+    .label-card {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .cards {
+        margin: 30px 10px 100px 10px;
+        gap: 15px;
+        grid-template-columns: repeat(1, 200px);
+        margin: 20px auto;
+        justify-items: center;
+    }
+
+    .card {
+        width: 350px;
+        height: 180px;
+    }
+
+
+.card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    /* تكييف قسم "من نحن" */
+    .about-section {
+        margin-top: 20px;
+    }
+
+    .about-box.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .about-text {
+        width: 70%;
+    }
+
+    .about-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 20px;
+        line-height: 1.4;
+        text-align: right;
+    }
+
+    .about-img {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+
+    /* تكييف الفوتر */
+    .footer1 {
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .footer1 a {
+        font-size: 12px;
+    }
+}
+
+/* ======================= ميديا كويري: شاشات أقل من 480px ======================= */
+
+/* شاشات أصغر من 480px */
+@media (max-width: 480px) {
+
+  /* توزيع الهيرو في الشاشات الصغيرة */
+  .hero {
+    grid-template-columns: 1fr 2fr;
+    margin: 10px 10px 30px 10px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    color: #e1b394;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .order-btn {
+    padding: 8px 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 170px;
+    font-size: 14px;
+  }
+
+  .text-box img {
+    width: 220px;
+    margin-top: 5px;
+  }
+
+  /* صور الهيرو في الشاشات الصغيرة */
+  .imgs {
+    width: 100%;
+    justify-self: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-img {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    opacity: 0.8;
+  }
+
+  .img1 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    opacity: 0.6;
+    z-index: 1;
+    transform: scale(1);
+  }
+
+  /* الجاليري في الشاشات الصغيرة – حل مشكلة الفراغات */
+  .gallery {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .gallery .box {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .gallery .box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* الفوتر في الشاشات الصغيرة */
+  .footer1 {
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer1 a {
+    font-size: 14px;
+  }
+}
+
+/* ======================= ميديا كويري: شاشات أقل من 380px ======================= */
+
+/* شاشات أصغر من 380px */
+@media (max-width: 380px) {
+
+  /* الهيرو في الشاشات الصغيرة جداً */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .text-box img {
+    width: 180px;
+    margin: 10px auto;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .hero h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .order-btn {
+    padding: 8px 25px;
+    font-size: 13px;
+    width: 150px;
+    margin: 10px auto;
+  }
+
+  /* صور الهيرو */
+  .imgs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .main-img {
+    width: 85%;
+    max-width: 280px;
+    top: 5px;
+    opacity: 0.85;
+  }
+
+  .img1 {
+    width: 80%;
+    max-width: 250px;
+    transform: scale(0.9);
+    opacity: 0.55;
+  }
+
+  /* الجاليري – إزالة أي فراغات بين الصور */
+  .gallery {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
+  .gallery .box {
+    height: auto;
+    margin: 0;
+  }
+
+  .gallery .box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* العنوان والخط في الشاشات الصغيرة جداً */
+  .label-gallery h1 {
+    font-size: 20px;
+  }
+
+  .devider {
+    height: 2px;
+    width: 70%;
+    margin: 8px auto 0 auto;
+  }
+
+  /* الفوتر */
+  .footer1 {
+
+
+flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .footer1 a {
+    font-size: 13px;
+  }
+}

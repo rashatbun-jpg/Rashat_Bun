@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رشة بُن | Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+  <section class="contact">
+    <div class="container">
+      <div class="hero-top">
+        <div class="brand-pill">
+          <span class="dot"></span>
+          <span class="brand-name">رشة بُن</span>
+          <span class="tag"> <a href="home.html"> • الصفحة الرئيسية</a> <a href="cafe.html">• المينيو</a> </span>
+        </div>
+
+        <h1 class="hero-title">تواصل معنا</h1>
+        <p class="hero-sub">
+          مكانك الدافي… ريحة البن من أول خطوة، ولمّة قهوة ترد الروح.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <!-- Left: Form -->
+        <div class="contact-left">
+          <h2 class="title">CONTACT US</h2>
+          <p class="subtitle">خلّيلنا رسالتك… سيتم الرد عليك في اقرب وقت ☕</p>
+
+          <form class="form" action="https://formsubmit.co/rashatbun@gmail.com" method="POST">
+            <!-- إعدادات FormSubmit -->
+            <input type="hidden" name="_subject" value="رسالة جديدة من موقع رشة بُن ☕">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <!-- Reply-To = ايميل الزبون (مش From) -->
+            <input type="hidden" name="_replyto" id="replyTo">
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" placeholder="+218 ..." />
+            </div>
+
+            <div class="field">
+              <label for="msg">Your Message</label>
+            <textarea id="msg" name="Message" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+              SEND <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <div class="mini-info">
+            <a class="mini-link" href="tel:+218000000000">
+              <span class="chip">📞</span> +218 00 000 0000
+            </a>
+
+            <a class="mini-link" href="mailto:rashatbun@gmail.com">
+              <span class="chip">✉️</span> rashatbun@gmail.com
+            </a>
+
+            <span class="mini-badge">
+              <span class="spark">✨</span>
+              بنّ محمّص يومياً • ريحة فواحة • مزاج رايق
+            </span>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="contact-right">
+          <div class="right-card photo-card" aria-label="Cafe photo">
+            <img src="715f5810-5a80-403a-8595-6bef594ab4a0.png" alt="قهوة رشة بُن - اللافتة والجو" loading="lazy">
+          </div>
+
+          <div class="right-card map-card" aria-label="Map location">
+            <iframe
+              class="map-embed"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=13.17%2C32.85%2C13.22%2C32.89&layer=mapnik"
+              loading="lazy">
+            </iframe>
+
+            <div class="map-overlay">
+              <div class="map-actions">
+                <a class="map-btn primary" target="_blank" rel="noopener"
+                   href="https://www.google.com/maps/search/?api=1&query=%D9%88%D8%B3%D8%A7%D8%B9%D9%8A%D8%A9%20%D8%A8%D8%AF%D9%8A%D8%B1%D9%8A%20%D8%AC%D9%86%D8%A8%20Avero%20Caf%C3%A9">
+                  Open in Google Maps
+                </a>
+
+                <a class="map-btn" target="_blank" rel="noopener"
+                   href="https://www.google.com/maps/dir/?api=1&destination=%D9%88%D8%B3%D8%A7%D8%B9%D9%8A%D8%A9%20%D8%A8%D8%AF%D9%8A%D8%B1%D9%8A%20%D8%AC%D9%86%D8%A8%20Avero%20Caf%C3%A9">
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-block">
+          <div class="brand">
+            <span class="brand-mark">☕</span>
+            <span class="brand-name">رشة بُن</span>
+          </div>
+          <p class="dim">Coffee that feels like home.</p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Address</h4>
+          <p>Al-Gharbi District</p>
+          <p class="dim">Beside Avero Café — Wasaaya Bdeiri</p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Contact</h4>
+          <p>Phone: +218 00 000 0000</p>
+          <p>Email: rashatbun@gmail.com</p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Opening Hours</h4>
+          <p>Sat–Thu: 10:00 — 22:00</p>
+          <p class="dim">Fri: 16:00 — 23:00</p>
+        </div>
+
+        <div class="footer-block footer-social">
+          <h4>Follow Us</h4>
+          <div class="footer-icons">
+            <a href="#" class="fb" aria-label="Facebook"><img src="facebook-brands-solid-full (1).svg" alt=""></a>
+            <a href="#" class="yt" aria-label="TikTok"><img src="tiktok-brands-solid-full.svg" alt=""></a>
+            <a href="#" class="ig" aria-label="Instagram"><img src="instagram-brands-solid-full (1).svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="successModal" aria-hidden="true" style="display:none;">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <div class="modal-icon">☕</div>
+      <h3 id="mTitle">وصلتنا رسالتك!</h3>
+      <p>
+        شكراً لتواصلك مع <b>رشة بُن</b> 🤎<br>
+        حنردّوا عليك في أقرب وقت.
+      </p>
+      <button class="modal-btn" id="okBtn" type="button">تمام</button>
+    </div>
+  </div>
+
+  <script>
+    const form  = document.querySelector(".form");
+    const modal = document.getElementById("successModal");
+    const okBtn = document.getElementById("okBtn");
+
+    // Enter ينقلك للحقل اللي بعده (وما يعملش submit)
+    form.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter") return;
+      const el = e.target;
+      if (el.tagName.toLowerCase() === "textarea") return;
+
+      const fields = [...form.querySelectorAll("input, textarea")]
+        .filter(x => !x.disabled && x.type !== "hidden");
+
+      const i = fields.indexOf(el);
+      if (i > -1 && i < fields.length - 1) {
+        e.preventDefault();
+        fields[i + 1].focus();
+      }
+    });
+
+    function closeModal(){ modal.style.display = "none"; }
+    okBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    // ✅ إرسال فعلي + مودال نجاح
+    form.addEventListener("submit", async function (e) {
+      // نخلي التحقق الافتراضي يشتغل (رسالة @ وغيرها)
+      if (!form.checkValidity()) return;
+
+      e.preventDefault();
+
+      // Reply-To = ايميل الزبون
+      document.getElementById("replyTo").value = document.getElementById("email").value;
+
+      const data = new FormData(form);
+
+      try {
+        // no-cors باش ما يوقفش بسبب CORS
+        await fetch(form.action, { method: "POST", body: data, mode: "no-cors" });
+
+        modal.style.display = "flex";
+        form.reset();
+      } catch (err) {
+        alert("صار خطأ في الإرسال. جربي مرة ثانية.");
+      }
+    });
+  </script>
+</body>
+</html>
+
